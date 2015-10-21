@@ -1,0 +1,24 @@
+{
+  "name": "gc--csv",
+  "version": "1.0.0",
+  "description": "returns a csv of stuff polled from gocardless api",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "echo \"no tests yet\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coopie/gc--csv.git"
+  },
+  "author": "Sam Coope",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coopie/gc--csv/issues"
+  },
+  "homepage": "https://github.com/coopie/gc--csv#readme",
+  "dependencies": {
+    "gocardless": "^1.0.0-beta6",
+    "request": "^2.65.0"
+  }
+}

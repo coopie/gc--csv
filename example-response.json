@@ -1,0 +1,860 @@
+{
+    "payments": [
+        {
+            "id": "PM0000RG14J48T",
+            "created_at": "2015-10-15T04:31:28.105Z",
+            "charge_date": "2015-10-20",
+            "amount": 2000,
+            "description": "Test",
+            "currency": "GBP",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": "Test",
+            "metadata": {},
+            "links": {
+                "mandate": "MD000090N1NX2Y",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB00001GB6ET72"
+            }
+        },
+        {
+            "id": "PM0000R9HB590S",
+            "created_at": "2015-10-12T04:30:44.647Z",
+            "charge_date": "2015-10-15",
+            "amount": 500,
+            "description": "Gold plan",
+            "currency": "EUR",
+            "status": "charged_back",
+            "amount_refunded": 0,
+            "reference": "Hamilton Enterprise",
+            "metadata": {},
+            "links": {
+                "mandate": "MD00007QRDYV71",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB000012QW1P5C"
+            }
+        },
+        {
+            "id": "PM0000R54E38Q9",
+            "created_at": "2015-10-09T04:31:48.704Z",
+            "charge_date": "2015-10-14",
+            "amount": 5000,
+            "description": "Gold Plan",
+            "currency": "GBP",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": "Weekly gym",
+            "metadata": {},
+            "links": {
+                "mandate": "MD000090EM7N33",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB00001G6Y9PS1"
+            }
+        },
+        {
+            "id": "PM0000R2A7DERE",
+            "created_at": "2015-10-08T04:31:13.044Z",
+            "charge_date": "2015-10-13",
+            "amount": 2000,
+            "description": "Test",
+            "currency": "GBP",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": "Test",
+            "metadata": {},
+            "links": {
+                "mandate": "MD000090N1NX2Y",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB00001GB6ET72"
+            }
+        },
+        {
+            "id": "PM0000QP6NXD7M",
+            "created_at": "2015-10-01T04:31:05.870Z",
+            "charge_date": "2015-10-06",
+            "amount": 2000,
+            "description": "Test",
+            "currency": "GBP",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": "Test",
+            "metadata": {},
+            "links": {
+                "mandate": "MD000090N1NX2Y",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB00001GB6ET72"
+            }
+        },
+        {
+            "id": "PM0000QG4ZFTR6",
+            "created_at": "2015-09-30T04:41:07.152Z",
+            "charge_date": "2015-10-05",
+            "amount": 1000,
+            "description": null,
+            "currency": "EUR",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": "amaury business",
+            "metadata": {},
+            "links": {
+                "mandate": "MD00007MJQR0YT",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB000012A0MB36"
+            }
+        },
+        {
+            "id": "PM0000QBD1KX45",
+            "created_at": "2015-09-29T04:30:58.894Z",
+            "charge_date": "2015-10-02",
+            "amount": 1,
+            "description": null,
+            "currency": "EUR",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": null,
+            "metadata": {},
+            "links": {
+                "mandate": "MD000049HF413Q",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB000011MNZVN4"
+            }
+        },
+        {
+            "id": "PM0000Q75SSSDZ",
+            "created_at": "2015-09-28T04:32:37.009Z",
+            "charge_date": "2015-10-01",
+            "amount": 50000,
+            "description": "Monthly rental (Silver package)",
+            "currency": "GBP",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": null,
+            "metadata": {},
+            "links": {
+                "mandate": "MD00008FNDTG3G",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB00001DGKQHQV"
+            }
+        },
+        {
+            "id": "PM0000Q71N0YEZ",
+            "created_at": "2015-09-28T04:32:17.896Z",
+            "charge_date": "2015-10-01",
+            "amount": 1000,
+            "description": "",
+            "currency": "EUR",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": null,
+            "metadata": {},
+            "links": {
+                "mandate": "MD00001RYP4VNP",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB000011EGNEXB"
+            }
+        },
+        {
+            "id": "PM0000Q71DN67V",
+            "created_at": "2015-09-28T04:32:16.817Z",
+            "charge_date": "2015-10-01",
+            "amount": 10000,
+            "description": "Monthly Rental (Bronze Package)",
+            "currency": "GBP",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": null,
+            "metadata": {},
+            "links": {
+                "mandate": "MD00001RVFN4N2",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB000011EAARST"
+            }
+        },
+        {
+            "id": "PM0000Q6ZF97XC",
+            "created_at": "2015-09-28T04:32:07.805Z",
+            "charge_date": "2015-10-01",
+            "amount": 1000,
+            "description": "Abonnement email",
+            "currency": "EUR",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": null,
+            "metadata": {},
+            "links": {
+                "mandate": "MD00006WYQSXF3",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB000011VS4KYP"
+            }
+        },
+        {
+            "id": "PM0000Q6ZBHSGN",
+            "created_at": "2015-09-28T04:32:07.255Z",
+            "charge_date": "2015-10-01",
+            "amount": 50000,
+            "description": "Monthly rental (Silver package)",
+            "currency": "GBP",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": null,
+            "metadata": {},
+            "links": {
+                "mandate": "MD00007J3YCP36",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB0000123JJ1MH"
+            }
+        },
+        {
+            "id": "PM0000Q6YMZCFK",
+            "created_at": "2015-09-28T04:32:03.992Z",
+            "charge_date": "2015-10-01",
+            "amount": 50000,
+            "description": "Monthly Rental (Silver Package)",
+            "currency": "GBP",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": null,
+            "metadata": {},
+            "links": {
+                "mandate": "MD00001RVEHN7G",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB000011E9TEAF"
+            }
+        },
+        {
+            "id": "PM0000Q6YKKRJT",
+            "created_at": "2015-09-28T04:32:03.901Z",
+            "charge_date": "2015-10-01",
+            "amount": 50000,
+            "description": "Monthly rental (Silver package)",
+            "currency": "GBP",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": null,
+            "metadata": {},
+            "links": {
+                "mandate": "MD0000580H64HW",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB000011PAGBJN"
+            }
+        },
+        {
+            "id": "PM0000Q6X26M5G",
+            "created_at": "2015-09-28T04:31:56.853Z",
+            "charge_date": "2015-10-01",
+            "amount": 10000,
+            "description": "Monthly Rental (Bronze Package)",
+            "currency": "GBP",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": null,
+            "metadata": {},
+            "links": {
+                "mandate": "MD00001RT0H8V2",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB000011DW50A1"
+            }
+        },
+        {
+            "id": "PM0000Q6WZVVRY",
+            "created_at": "2015-09-28T04:31:56.427Z",
+            "charge_date": "2015-10-01",
+            "amount": 100000,
+            "description": "Monthly Rental (Gold Package)",
+            "currency": "GBP",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": null,
+            "metadata": {},
+            "links": {
+                "mandate": "MD00001RVDJKS7",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB000011E8RCSX"
+            }
+        },
+        {
+            "id": "PM0000Q6WBZED7",
+            "created_at": "2015-09-28T04:31:53.649Z",
+            "charge_date": "2015-10-01",
+            "amount": 5000,
+            "description": "Monthly plan",
+            "currency": "EUR",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": "Hamilton",
+            "metadata": {},
+            "links": {
+                "mandate": "MD00007QRGM4AP",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB000012QXX0MA"
+            }
+        },
+        {
+            "id": "PM0000Q6SEV8HC",
+            "created_at": "2015-09-28T04:31:41.196Z",
+            "charge_date": "2015-10-01",
+            "amount": 50000,
+            "description": "Monthly rental (Silver package)",
+            "currency": "GBP",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": null,
+            "metadata": {},
+            "links": {
+                "mandate": "MD00001S3YVM62",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB000011ESCEWF"
+            }
+        },
+        {
+            "id": "PM0000Q6SBQGVP",
+            "created_at": "2015-09-28T04:31:40.779Z",
+            "charge_date": "2015-10-01",
+            "amount": 50000,
+            "description": "Monthly rental (Silver package)",
+            "currency": "GBP",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": null,
+            "metadata": {},
+            "links": {
+                "mandate": "MD00001RW1CV0Y",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB000011ECNBE8"
+            }
+        },
+        {
+            "id": "PM0000Q6RB5D6G",
+            "created_at": "2015-09-28T04:31:36.290Z",
+            "charge_date": "2015-10-01",
+            "amount": 50000,
+            "description": "Monthly rental (Silver package)",
+            "currency": "GBP",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": null,
+            "metadata": {},
+            "links": {
+                "mandate": "MD000084Z1K485",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB0000155RXQSX"
+            }
+        },
+        {
+            "id": "PM0000Q6R9ANS1",
+            "created_at": "2015-09-28T04:31:36.064Z",
+            "charge_date": "2015-10-01",
+            "amount": 50000,
+            "description": "Monthly rental (Silver package)",
+            "currency": "GBP",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": null,
+            "metadata": {},
+            "links": {
+                "mandate": "MD000086DGS0RE",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB000015HG2WBS"
+            }
+        },
+        {
+            "id": "PM0000Q6PQ8ZNY",
+            "created_at": "2015-09-28T04:31:29.057Z",
+            "charge_date": "2015-10-01",
+            "amount": 10000,
+            "description": "Monthly Rental (Bronze Package)",
+            "currency": "GBP",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": null,
+            "metadata": {},
+            "links": {
+                "mandate": "MD00001RVANRT3",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB000011E5P0DZ"
+            }
+        },
+        {
+            "id": "PM0000Q6PK78A0",
+            "created_at": "2015-09-28T04:31:28.369Z",
+            "charge_date": "2015-10-01",
+            "amount": 50000,
+            "description": "Monthly Rental (Silver Package)",
+            "currency": "GBP",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": null,
+            "metadata": {},
+            "links": {
+                "mandate": "MD00001RV8B459",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB000011E30KFA"
+            }
+        },
+        {
+            "id": "PM0000Q6PJXV0R",
+            "created_at": "2015-09-28T04:31:28.278Z",
+            "charge_date": "2015-10-01",
+            "amount": 10000,
+            "description": "Monthly Rental (Bronze Package)",
+            "currency": "GBP",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": null,
+            "metadata": {},
+            "links": {
+                "mandate": "MD00001RVG30WK",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB000011EB1KKG"
+            }
+        },
+        {
+            "id": "PM0000Q6PHFZ7V",
+            "created_at": "2015-09-28T04:31:28.189Z",
+            "charge_date": "2015-10-01",
+            "amount": 10000,
+            "description": "Monthly Rental (Bronze Package)",
+            "currency": "GBP",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": null,
+            "metadata": {},
+            "links": {
+                "mandate": "MD00001RTKX4E5",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB000011DZDWK9"
+            }
+        },
+        {
+            "id": "PM0000Q6PGG7NB",
+            "created_at": "2015-09-28T04:31:28.093Z",
+            "charge_date": "2015-10-01",
+            "amount": 50000,
+            "description": "Monthly rental (Silver package)",
+            "currency": "GBP",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": null,
+            "metadata": {},
+            "links": {
+                "mandate": "MD0000580J537W",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB000011PBFABN"
+            }
+        },
+        {
+            "id": "PM0000Q6MZ71AD",
+            "created_at": "2015-09-28T04:31:21.177Z",
+            "charge_date": "2015-10-01",
+            "amount": 50000,
+            "description": "Monthly Rental (Silver Package)",
+            "currency": "GBP",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": null,
+            "metadata": {},
+            "links": {
+                "mandate": "MD00001RTMB62E",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB000011E0235Q"
+            }
+        },
+        {
+            "id": "PM0000Q6MX33C1",
+            "created_at": "2015-09-28T04:31:20.845Z",
+            "charge_date": "2015-10-01",
+            "amount": 10000,
+            "description": "Monthly Rental (Bronze Package)",
+            "currency": "GBP",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": null,
+            "metadata": {},
+            "links": {
+                "mandate": "MD00001RVC7MDV",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB000011E76T9Q"
+            }
+        },
+        {
+            "id": "PM0000Q6MWTJ26",
+            "created_at": "2015-09-28T04:31:20.734Z",
+            "charge_date": "2015-10-01",
+            "amount": 5000,
+            "description": "Abonnement regulier",
+            "currency": "EUR",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": null,
+            "metadata": {},
+            "links": {
+                "mandate": "MD00001RYP4VNP",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB000011EFA90B"
+            }
+        },
+        {
+            "id": "PM0000Q6MV58KQ",
+            "created_at": "2015-09-28T04:31:20.480Z",
+            "charge_date": "2015-10-01",
+            "amount": 50000,
+            "description": "Monthly Rental (Silver Package)",
+            "currency": "GBP",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": null,
+            "metadata": {},
+            "links": {
+                "mandate": "MD00001RVBXJKZ",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB000011E6EVRM"
+            }
+        },
+        {
+            "id": "PM0000Q6MS81Q6",
+            "created_at": "2015-09-28T04:31:20.298Z",
+            "charge_date": "2015-10-01",
+            "amount": 100000,
+            "description": "Monthly Rental (Gold Package)",
+            "currency": "GBP",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": null,
+            "metadata": {},
+            "links": {
+                "mandate": "MD00001RV9G368",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB000011E4ZJ6X"
+            }
+        },
+        {
+            "id": "PM0000Q6MCCZ7T",
+            "created_at": "2015-09-28T04:31:18.503Z",
+            "charge_date": "2015-10-01",
+            "amount": 13000,
+            "description": "Monthly rental (Bronze package)",
+            "currency": "EUR",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": null,
+            "metadata": {},
+            "links": {
+                "mandate": "MD00001RXGQJ4D",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB000011EEPX3N"
+            }
+        },
+        {
+            "id": "PM0000Q6K2GMFW",
+            "created_at": "2015-09-28T04:31:12.692Z",
+            "charge_date": "2015-10-01",
+            "amount": 130000,
+            "description": "Monthly rental (Gold package)",
+            "currency": "EUR",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": null,
+            "metadata": {},
+            "links": {
+                "mandate": "MD00007VZ38H6B",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB0000135WEDHW"
+            }
+        },
+        {
+            "id": "PM0000Q6JJP9SP",
+            "created_at": "2015-09-28T04:31:10.408Z",
+            "charge_date": "2015-10-01",
+            "amount": 1000,
+            "description": "Abonnement telecom",
+            "currency": "EUR",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": null,
+            "metadata": {},
+            "links": {
+                "mandate": "MD00006WY4NJ3Y",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB000011VNK711"
+            }
+        },
+        {
+            "id": "PM0000Q6JHQP9Z",
+            "created_at": "2015-09-28T04:31:10.281Z",
+            "charge_date": "2015-10-01",
+            "amount": 50000,
+            "description": "Paiement à 1%",
+            "currency": "EUR",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": null,
+            "metadata": {},
+            "links": {
+                "mandate": "MD00006X8YB0VF",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB000011XNF7V5"
+            }
+        },
+        {
+            "id": "PM0000Q6HKZDDH",
+            "created_at": "2015-09-28T04:31:06.138Z",
+            "charge_date": "2015-10-01",
+            "amount": 70000,
+            "description": "Monthly Rental (Silver Package)",
+            "currency": "EUR",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": null,
+            "metadata": {},
+            "links": {
+                "mandate": "MD00001RV7NTZX",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB000011E219RR"
+            }
+        },
+        {
+            "id": "PM0000Q6GS6M94",
+            "created_at": "2015-09-28T04:31:02.543Z",
+            "charge_date": "2015-10-01",
+            "amount": 50000,
+            "description": "Monthly rental (Silver package)",
+            "currency": "GBP",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": null,
+            "metadata": {},
+            "links": {
+                "mandate": "MD000086SR0542",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB000015MTMD17"
+            }
+        },
+        {
+            "id": "PM0000Q6GPQNBE",
+            "created_at": "2015-09-28T04:31:02.115Z",
+            "charge_date": "2015-10-01",
+            "amount": 100000,
+            "description": "Monthly rental (Gold package)",
+            "currency": "GBP",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": null,
+            "metadata": {},
+            "links": {
+                "mandate": "MD000084ZV6QQD",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB0000155YEA2R"
+            }
+        },
+        {
+            "id": "PM0000Q6GNVJXP",
+            "created_at": "2015-09-28T04:31:02.004Z",
+            "charge_date": "2015-10-01",
+            "amount": 130000,
+            "description": "Monthly rental (Gold package)",
+            "currency": "EUR",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": null,
+            "metadata": {},
+            "links": {
+                "mandate": "MD000084ZYD2Q7",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB00001562T9J5"
+            }
+        },
+        {
+            "id": "PM0000Q6GJDCQM",
+            "created_at": "2015-09-28T04:31:01.559Z",
+            "charge_date": "2015-10-01",
+            "amount": 50000,
+            "description": "Monthly rental (Silver package)",
+            "currency": "GBP",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": null,
+            "metadata": {},
+            "links": {
+                "mandate": "MD000084ZEBNR3",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB0000155WDPHQ"
+            }
+        },
+        {
+            "id": "PM0000Q6GHXE87",
+            "created_at": "2015-09-28T04:31:01.473Z",
+            "charge_date": "2015-10-01",
+            "amount": 50000,
+            "description": "Monthly rental (Silver package)",
+            "currency": "GBP",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": null,
+            "metadata": {},
+            "links": {
+                "mandate": "MD000084Z9WAJQ",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB0000155VMAE0"
+            }
+        },
+        {
+            "id": "PM0000Q6GGGJG9",
+            "created_at": "2015-09-28T04:31:01.382Z",
+            "charge_date": "2015-10-01",
+            "amount": 50000,
+            "description": "Monthly rental (Silver package)",
+            "currency": "GBP",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": null,
+            "metadata": {},
+            "links": {
+                "mandate": "MD000084Z7EB6P",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB0000155T2Z1F"
+            }
+        },
+        {
+            "id": "PM0000Q6EA7TZF",
+            "created_at": "2015-09-28T04:30:51.703Z",
+            "charge_date": "2015-10-01",
+            "amount": 70000,
+            "description": "Monthly rental (Silver package)",
+            "currency": "EUR",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": null,
+            "metadata": {},
+            "links": {
+                "mandate": "MD00008GZT2JHV",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB00001E4GG7HH"
+            }
+        },
+        {
+            "id": "PM0000PZ3C91MY",
+            "created_at": "2015-09-25T04:31:13.064Z",
+            "charge_date": "2015-09-30",
+            "amount": 5000,
+            "description": "Abonnement mensuel",
+            "currency": "EUR",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": "Fidroit Abonnement Mensuel Web",
+            "metadata": {},
+            "links": {
+                "mandate": "MD00007MWHEVSA",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB000012AZ6QG0"
+            }
+        },
+        {
+            "id": "PM0000PWZK359R",
+            "created_at": "2015-09-24T04:31:11.778Z",
+            "charge_date": "2015-09-29",
+            "amount": 2000,
+            "description": "Test",
+            "currency": "GBP",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": "Test",
+            "metadata": {},
+            "links": {
+                "mandate": "MD000090N1NX2Y",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB00001GB6ET72"
+            }
+        },
+        {
+            "id": "PM0000PBGHSM8G",
+            "created_at": "2015-09-17T04:31:04.285Z",
+            "charge_date": "2015-09-22",
+            "amount": 2000,
+            "description": "Test",
+            "currency": "GBP",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": "Test",
+            "metadata": {},
+            "links": {
+                "mandate": "MD000090N1NX2Y",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB00001GB6ET72"
+            }
+        },
+        {
+            "id": "PM0000NR2G1Z9H",
+            "created_at": "2015-09-10T07:52:37.916Z",
+            "charge_date": "2015-09-15",
+            "amount": 1000,
+            "description": "Test",
+            "currency": "GBP",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": "Nutmegtest",
+            "metadata": {},
+            "links": {
+                "mandate": "MD000090N1NX2Y",
+                "creditor": "CR000035G8C32N"
+            }
+        },
+        {
+            "id": "PM0000NR2FRYH8",
+            "created_at": "2015-09-10T07:51:42.799Z",
+            "charge_date": "2015-09-15",
+            "amount": 2000,
+            "description": "Test",
+            "currency": "GBP",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": "Test",
+            "metadata": {},
+            "links": {
+                "mandate": "MD000090N1NX2Y",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB00001GB6ET72"
+            }
+        },
+        {
+            "id": "PM0000NQSSD3P2",
+            "created_at": "2015-09-10T04:31:05.457Z",
+            "charge_date": "2015-09-15",
+            "amount": 500,
+            "description": "Gold plan",
+            "currency": "EUR",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": "Hamilton Enterprise",
+            "metadata": {},
+            "links": {
+                "mandate": "MD00007QRDYV71",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB000012QW1P5C"
+            }
+        },
+        {
+            "id": "PM0000NK3FR4Q4",
+            "created_at": "2015-09-07T15:11:24.281Z",
+            "charge_date": "2015-09-14",
+            "amount": 5000,
+            "description": "Gold Plan",
+            "currency": "GBP",
+            "status": "confirmed",
+            "amount_refunded": 0,
+            "reference": "Weekly gym",
+            "metadata": {},
+            "links": {
+                "mandate": "MD000090EM7N33",
+                "creditor": "CR000035G8C32N",
+                "subscription": "SB00001G6Y9PS1"
+            }
+        }
+    ],
+    "meta": {
+        "cursors": {
+            "after": "PM0000NK3FR4Q4",
+            "before": null
+        },
+        "limit": 50
+    }
+}
