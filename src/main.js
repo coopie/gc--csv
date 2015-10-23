@@ -1,6 +1,6 @@
 
-var configureGoCardlessClient = require('../gocardless-fixed/lib/gocardless');
 var GoCardlessRequest = require('./gocardless-request');
+var Promise = require('bluebird');
 
 var args = process.argv.slice(2);
 
@@ -10,44 +10,22 @@ if (!token) {
     process.exit();
 }
 
-var client = configureGoCardlessClient({
-    token: token,
-    appId: 'Coope',
-    appSecret: 'I secretly love cheese',
-    merchantId: '',
-    sandbox: true
+var gocardlessRequest = new GoCardlessRequest(token);
+
+// Get all of the payments, customers and mandates in the server
+Promise.props({
+    customers: gocardlessRequest.get('customers'),
+    payments: gocardlessRequest.get('payments'),
+    mandates: gocardlessRequest.get('mandates')
+}).then(function(responses) {
+    var customers = responses.customers;
+    var payments = responses.payments;
+    var mandates = responses.mandates;
+    console.log(mandates);
+
 });
-
-var requestOptions = {
-    headers: {
-        'GoCardless-Version': '2015-07-06'
-    },
-    path: '/payments'
-};
-// client.request(requestOptions, function(error, response, body) {
-//     if (error) {
-//         console.log('error: ', error);
-//     } else {
-//         var bodyDOA = JSON.parse(body);
-//         console.log(bodyDOA);
-//     }
 //
+// betterClient.request('/payments')
+// .then(function(payments) {
+//     console.log(payments);
 // });
-
-// for customer names
-// requestOptions.path = "/customers";
-// client.request(requestOptions, function(error, response, body) {
-//     if (error) {
-//         console.log('error: ', error);
-//     } else {
-//         var bodyDOA = JSON.parse(body);
-//         console.log(bodyDOA);
-//     }
-//
-// });
-
-var betterClient = new GoCardlessRequest(token);
-betterClient.request('/payments')
-.then(function(payments) {
-    console.log(payments);
-});

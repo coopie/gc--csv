@@ -1,3 +1,6 @@
+// A wrapper around 'request' library which adds all of the default headers to
+// the request. Also uses promises instead of callbacks for clear code
+
 var request = require('request');
 var Promise = require('bluebird');
 
@@ -14,17 +17,18 @@ function GoCardlessRequest(authToken) {
           'User-Agent': 'sam coope' // do we need this?
       }
   };
-
 }
 
-GoCardlessRequest.prototype.request = function(path) {
+// Takes a string of the endpoint desired, e.g ('customers')
+GoCardlessRequest.prototype.get = function(endpoint) {
     return new Promise(function(fulfil, reject) {
-        this.options.uri = BASE_URL + path;
+        this.options.uri = BASE_URL + '/' + endpoint;
         request(this.options, function(error, repsonse, body) {
             if (error) {
                 reject(error);
             }
-            var response = JSON.parse(body);
+            // something here about the response contains metadata, and i want to remove that
+            var response = JSON.parse(body)[endpoint];
             fulfil(response);
         });
     }.bind(this));
@@ -32,20 +36,3 @@ GoCardlessRequest.prototype.request = function(path) {
 };
 
 module.exports = GoCardlessRequest;
-
-// Client.prototype.request = function(opts, cb) {
-//   if (!opts.auth) opts = assignAuthHeader(opts, this.config.token);
-//   opts.headers = (opts.headers || {});
-//   opts.headers.Accept = 'application/json';
-//   opts.headers['User-Agent'] = 'gocardless-node/v' + constants.VERSION;
-//   opts.uri = this.config.baseUrl + (opts.path || '');
-//   console.log('options: ', opts);
-//   return request(opts, cb);
-// };
-//
-// function assignAuthHeader(opts, token) {
-//   var authHeader = 'Bearer ' + token;
-//   opts.headers = (opts.headers || {});
-//   opts.headers.Authorization = (opts.headers.Authorization || authHeader);
-//   return opts;
-// }
