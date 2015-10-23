@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/coopie/gc--csv#readme",
   "dependencies": {
+    "bluebird": "^2.10.2",
     "gocardless": "^1.0.0-beta6",
     "request": "^2.65.0"
   }

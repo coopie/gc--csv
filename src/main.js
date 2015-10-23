@@ -1,5 +1,6 @@
 
-var gc = require('../gocardless-fixed/lib/gocardless');
+var configureGoCardlessClient = require('../gocardless-fixed/lib/gocardless');
+var GoCardlessRequest = require('./gocardless-request');
 
 var args = process.argv.slice(2);
 
@@ -9,7 +10,7 @@ if (!token) {
     process.exit();
 }
 
-var client = gc({
+var client = configureGoCardlessClient({
     token: token,
     appId: 'Coope',
     appSecret: 'I secretly love cheese',
@@ -23,15 +24,30 @@ var requestOptions = {
     },
     path: '/payments'
 };
-client.request(requestOptions, function(error, response, body) {
-    if (error) {
-        console.log('error: ', error);
-    } else {
-        console.log('body: ', body);
-        var payments = body.payments;
-        console.log(body[0].payments);
-        console.log('\n\n\n\n\n\n');
-        console.log(body[1]);
-    }
+// client.request(requestOptions, function(error, response, body) {
+//     if (error) {
+//         console.log('error: ', error);
+//     } else {
+//         var bodyDOA = JSON.parse(body);
+//         console.log(bodyDOA);
+//     }
+//
+// });
 
+// for customer names
+// requestOptions.path = "/customers";
+// client.request(requestOptions, function(error, response, body) {
+//     if (error) {
+//         console.log('error: ', error);
+//     } else {
+//         var bodyDOA = JSON.parse(body);
+//         console.log(bodyDOA);
+//     }
+//
+// });
+
+var betterClient = new GoCardlessRequest(token);
+betterClient.request('/payments')
+.then(function(payments) {
+    console.log(payments);
 });
