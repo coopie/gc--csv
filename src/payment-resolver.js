@@ -1,6 +1,5 @@
 // A library of functions (in a funcitonal programming style) which deal with
 // resolving payments with customers
-var _ = require('lodash');
 
 // Returns a map of paymentId to customerID
 function getCustomersForPayment(payments, mandates) {

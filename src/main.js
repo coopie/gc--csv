@@ -1,6 +1,6 @@
-
 var GoCardlessRequest = require('./gocardless-request');
 var Promise = require('bluebird');
+var fs = Promise.promisifyAll(require('fs'));
 
 var args = process.argv.slice(2);
 
