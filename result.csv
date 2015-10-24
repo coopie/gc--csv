@@ -1,0 +1,7 @@
+
+> gc--csv@1.0.0 start /Users/sam_coope/Documents/Programming/gc--csv
+> node src/main.js "nVr6QN_Snrd7oFuAJlkzQQ7UnXp8cZX8nUdSBbhk"
+
+payments: size: 237
+mandates: size: 155
+customers: size: 156

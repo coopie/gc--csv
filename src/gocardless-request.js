@@ -47,7 +47,6 @@ GoCardlessRequest.prototype.getAll = function(endpoint) {
                     reject(error);
                 }
                 // something here about the response contains metadata, and i want to remove that
-
                 var responseBody = JSON.parse(body);
                 var responseData = responseBody[endpoint];
                 data = data.concat(responseData);

@@ -23,14 +23,19 @@ describe(moduleName, function() {
                 var mandates = [{
                     id: 'mandate',
                     links: {
-                        customer_bank_account: 'customer'
+                        customer_bank_account: 'customer-account'
+                    }
+                }];
+                var customerAccounts = [{
+                    id: 'customer-account',
+                    links: {
+                        customer: 'customer'
                     }
                 }];
                 var expected = {'payment': 'customer'};
-                assert.deepEqual(paymentResolver.getCustomersForPayment(payments, mandates), expected);
+                assert.deepEqual(paymentResolver.getCustomersForPayment(payments, mandates, customerAccounts), expected);
             });
         });
-        // maybe a larger test here?
     });
 
     describe('resolvePayments', function() {
@@ -52,13 +57,19 @@ describe(moduleName, function() {
                 var mandates = [{
                     id: 'mandate',
                     links: {
-                        customer_bank_account: 'customer'
+                        customer_bank_account: 'customer-account'
                     }
                 }];
                 var customers = [{
                     id: 'customer',
                     given_name: 'Leroy',
-                    last_name: 'Jenkins'
+                    family_name: 'Jenkins'
+                }];
+                var customerAccounts = [{
+                    id: 'customer-account',
+                    links: {
+                        customer: 'customer'
+                    }
                 }];
 
                 var expected = [{
@@ -68,7 +79,7 @@ describe(moduleName, function() {
                     'First Name': 'Leroy',
                     'Last Name': 'Jenkins'
                 }];
-                assert.deepEqual(paymentResolver.resolvePayments(payments, customers, mandates), expected);
+                assert.deepEqual(paymentResolver.resolvePayments(payments, customers, customerAccounts, mandates), expected);
             });
         });
     });
