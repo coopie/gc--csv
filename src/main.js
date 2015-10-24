@@ -15,25 +15,31 @@ if (!token) {
 }
 var pathForCSV = args[1] ? args[1] : 'payments.csv';
 
-var gocardlessRequest = new GoCardlessRequest(token, request);
+main(token, request);
 
-// Get all of the payments, customers and mandates in the server
-console.log('Getting data from GoCardless');
-Promise.props({
-    customers: gocardlessRequest.getAll('customers'),
-    payments: gocardlessRequest.getAll('payments'),
-    mandates: gocardlessRequest.getAll('mandates'),
-    customerAccounts: gocardlessRequest.getAll('customer_bank_accounts')
-}).then(function(responses) {
-    console.log('Got data');
-    var customers = responses.customers;
-    var payments = responses.payments;
-    var mandates = responses.mandates;
-    var customerAccounts = responses.customerAccounts;
+function main(authToken, requestFunction) {
 
-    var data = paymentResolver.resolvePayments(payments, customers, customerAccounts, mandates);
-    fs.writeFileAsync(pathForCSV, csvWriter.toCSV(data))
-    .then(function() {
-        console.log('Wrote payment data to ' + pathForCSV);
+    var gocardlessRequest = new GoCardlessRequest(token, request);
+
+    // Get all of the payments, customers, customer-accounts and mandates from the sandbox
+    console.log('Getting data from GoCardless');
+    Promise.props({
+        customers: gocardlessRequest.getAll('customers'),
+        payments: gocardlessRequest.getAll('payments'),
+        mandates: gocardlessRequest.getAll('mandates'),
+        customerAccounts: gocardlessRequest.getAll('customer_bank_accounts')
+    }).then(function(responses) {
+        console.log('Got data');
+        var customers = responses.customers;
+        var payments = responses.payments;
+        var mandates = responses.mandates;
+        var customerAccounts = responses.customerAccounts;
+
+        var data = paymentResolver.resolvePayments(payments, customers, customerAccounts, mandates);
+        fs.writeFileAsync(pathForCSV, csvWriter.toCSV(data))
+        .then(function() {
+            console.log('Wrote payment data to ' + pathForCSV);
+        });
     });
-});
+}
+module.exports = main;

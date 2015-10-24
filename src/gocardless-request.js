@@ -1,7 +1,6 @@
 // A wrapper around 'request' library which adds all of the default headers to
 // the request. Also uses promises instead of callbacks for clear code
 
-// var request = require('request');
 var Promise = require('bluebird');
 
 // CONSTANTS: =================================================================
@@ -20,7 +19,8 @@ function GoCardlessRequest(authToken, request) {
     this.request = request;
 }
 
-// Takes a string of the endpoint desired, e.g ('customers')
+// Takes a string of the endpoint desired, e.g 'customers' and gets all of the
+// data from the sandbox by recursivley getting the all pages of data.
 GoCardlessRequest.prototype.getAll = function(endpoint) {
     var self = this;
     return getRecursive(BASE_URL + '/' + endpoint, [])
@@ -35,19 +35,16 @@ GoCardlessRequest.prototype.getAll = function(endpoint) {
                 if (error) {
                     reject(error);
                 }
-                // something here about the response contains metadata, and i want to remove that
                 var responseBody = JSON.parse(body);
                 var responseData = responseBody[endpoint];
                 data = data.concat(responseData);
 
-                // console.log('body after ' + after + ': ', responseBody);
-
-                // TODO we need to check what the hell this is meant to be
                 var nextID = responseBody.meta.cursors.after;
-                if (nextID) {
-                    fulfil(getRecursive(url, data, nextID));
-                } else {
+                // The final page of data has a null pointer to signify the end.
+                if (nextID === null) {
                     fulfil(data);
+                } else {
+                    fulfil(getRecursive(url, data, nextID));
                 }
             });
         });
