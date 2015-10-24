@@ -45,7 +45,7 @@ describe(moduleName, function() {
             });
         });
         describe('One payment, customer, mandate', function() {
-            it(shouldReturn + ' []', function() {
+            it(shouldReturn + ' payment info for Leroy Jenkins', function() {
                 var payments = [{
                     id: 'payment',
                     amount: 1234,

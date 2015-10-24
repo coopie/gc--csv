@@ -1,5 +1,6 @@
 var Promise = require('bluebird');
 var fs = Promise.promisifyAll(require('fs'));
+var request = require('request');
 
 var GoCardlessRequest = require('./gocardless-request');
 var paymentResolver = require('./payment-resolver');
@@ -12,8 +13,9 @@ if (!token) {
     console.error('Please enter a token');
     process.exit();
 }
+var pathForCSV = args[1] ? args[1] : 'payments.csv';
 
-var gocardlessRequest = new GoCardlessRequest(token);
+var gocardlessRequest = new GoCardlessRequest(token, request);
 
 // Get all of the payments, customers and mandates in the server
 console.log('Getting data from GoCardless');
@@ -28,16 +30,10 @@ Promise.props({
     var payments = responses.payments;
     var mandates = responses.mandates;
     var customerAccounts = responses.customerAccounts;
-    console.log('payments: size:', payments.length);
-    console.log('mandates: size:', mandates.length);
-    console.log('customers: size:', customers.length);
 
     var data = paymentResolver.resolvePayments(payments, customers, customerAccounts, mandates);
-    console.log(csvWriter.toCSV(data));
-
+    fs.writeFileAsync(pathForCSV, csvWriter.toCSV(data))
+    .then(function() {
+        console.log('Wrote payment data to ' + pathForCSV);
+    });
 });
-
-// gocardlessRequest.getAll('customers')
-// .then(function(customers) {
-//     console.log(JSON.stringify(customers));
-// });
