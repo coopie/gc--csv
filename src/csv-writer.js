@@ -1,6 +1,16 @@
+// A very simple CSV writer, it assumes that the elements in the array are of
+// uniform structure, and so takes the keys of the first object in the array as
+// the schema for the csv
+
+// For example [{x: 1, y:2}, {x: 6, y: -1, z: 'hello'}]
+//
+//  x, y
+//  1, 2
+//  6, -1
+//
+
 var _ = require('lodash');
 
-// exlpain how this works with an example, takes uniform input
 function toCSV(data) {
     if (!_.isArray(data)) {
         throw new TypeError('CSVWRITER: Data input must be an array');

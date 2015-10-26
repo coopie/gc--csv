@@ -15,25 +15,28 @@ if (!token) {
 }
 var pathForCSV = args[1] ? args[1] : 'payments.csv';
 
-main(token, request);
+var gocardlessRequest = new GoCardlessRequest(gcRequest);
 
-function main(authToken, requestFunction) {
+main(token, gocardlessRequest);
 
-    var gocardlessRequest = new GoCardlessRequest(token, request);
+function main(authToken, requester) {
 
     // Get all of the payments, customers, customer-accounts and mandates from the sandbox
     console.log('Getting data from GoCardless');
     Promise.props({
-        customers: gocardlessRequest.getAll('customers'),
-        payments: gocardlessRequest.getAll('payments'),
-        mandates: gocardlessRequest.getAll('mandates'),
-        customerAccounts: gocardlessRequest.getAll('customer_bank_accounts')
+        customers: requester.getAll('customers'),
+        payments: requester.getAll('payments'),
+        mandates: requester.getAll('mandates'),
+        customerAccounts: requester.getAll('customer_bank_accounts')
     }).then(function(responses) {
         console.log('Got data');
         var customers = responses.customers;
         var payments = responses.payments;
         var mandates = responses.mandates;
         var customerAccounts = responses.customerAccounts;
+        // console.log('payments: ', payments.length);
+        // console.log('customers: ', customers.length);
+        // console.log('mandates: ', mandates.length);
 
         var data = paymentResolver.resolvePayments(payments, customers, customerAccounts, mandates);
         fs.writeFileAsync(pathForCSV, csvWriter.toCSV(data))
@@ -42,4 +45,24 @@ function main(authToken, requestFunction) {
         });
     });
 }
+
+// Request function for gocardless sandbox
+function gcRequest(endpoint, after, callback) {
+    var BASE_URL = 'https://api-sandbox.gocardless.com';
+    var options = {
+        headers: {
+            'GoCardless-Version': '2015-07-06',
+            Authorization: 'Bearer ' + token,
+            Accept: 'application/json',
+            'User-Agent': 'Sam Coope'
+        }
+    };
+    options.uri = BASE_URL + '/' + endpoint;
+    options.uri += after ? '?after=' + after : '';
+    console.log('getting: ', options.uri);
+    return request(options, function(error, resonse, body) {
+        return callback(error, body);
+    });
+}
+
 module.exports = main;
