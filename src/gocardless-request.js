@@ -1,8 +1,13 @@
 // An interface to request data from the GoCardless sandbox.
-
 var Promise = require('bluebird');
 
-// request(url, afterID) -> function(error, body)
+// request is a function which takes:
+//
+//  endpoint: an endpoint of the GC api e.g 'customers'
+//  after: (optional) the id of the element you wish to get data after
+//  callback: function with signiature (error, body), where body is the response
+//  JSON from the request
+//
 function GoCardlessRequest(request) {
     this.request = request;
 }
@@ -13,42 +18,22 @@ GoCardlessRequest.prototype.getAll = function(endpoint) {
     var self = this;
     return getRecursive(endpoint, []);
 
-    function getRecursive(url, data, after) {
-        // return new Promise(function(fulfil, reject) {
-        //     self.options.uri = after ? url + '?after=' + after : url;
-        //     self.request(self.options, function(error, response, body) {
-        //         if (error) {
-        //             reject(error);
-        //         }
-        //         var responseBody = JSON.parse(body);
-        //         var responseData = responseBody[endpoint];
-        //         data = data.concat(responseData);
-        //
-        //         var nextID = responseBody.meta.cursors.after;
-        //         // The final page of data has a null pointer to signify the end.
-        //         if (nextID === null) {
-        //             fulfil(data);
-        //         } else {
-        //             fulfil(getRecursive(url, data, nextID));
-        //         }
-        //     });
-        // });
-
+    function getRecursive(endpoint, data, after) {
         return new Promise(function(fulfil, reject) {
-            self.request(url, after, function(error, body) {
+            self.request(endpoint, after, function(error, body) {
                 if (error) {
                     reject(error);
                 }
-                var responseBody = JSON.parse(body);
-                var responseData = responseBody[endpoint];
+                // var responseBody = JSON.parse(body);
+                var responseData = body[endpoint];
                 data = data.concat(responseData);
 
-                var nextID = responseBody.meta.cursors.after;
+                var nextID = body.meta.cursors.after;
                 // The final page of data has a null pointer to signify the end.
                 if (nextID === null) {
                     fulfil(data);
                 } else {
-                    fulfil(getRecursive(url, data, nextID));
+                    fulfil(getRecursive(endpoint, data, nextID));
                 }
             });
         });

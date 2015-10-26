@@ -34,9 +34,6 @@ function main(authToken, requester) {
         var payments = responses.payments;
         var mandates = responses.mandates;
         var customerAccounts = responses.customerAccounts;
-        // console.log('payments: ', payments.length);
-        // console.log('customers: ', customers.length);
-        // console.log('mandates: ', mandates.length);
 
         var data = paymentResolver.resolvePayments(payments, customers, customerAccounts, mandates);
         fs.writeFileAsync(pathForCSV, csvWriter.toCSV(data))
@@ -59,9 +56,8 @@ function gcRequest(endpoint, after, callback) {
     };
     options.uri = BASE_URL + '/' + endpoint;
     options.uri += after ? '?after=' + after : '';
-    console.log('getting: ', options.uri);
     return request(options, function(error, resonse, body) {
-        return callback(error, body);
+        return callback(error, JSON.stringify(body));
     });
 }
 
