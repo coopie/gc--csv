@@ -1,19 +1,21 @@
-// An interface to request data from the GoCardless sandbox.
+// An interface to request data from the GoCardless sandbox. Is a JS prototype
 var Promise = require('bluebird');
 
-// request is a function which takes:
+// request params:
 //
 //  endpoint: an endpoint of the GC api e.g 'customers'
 //  after: (optional) the id of the element you wish to get data after
 //  callback: function with signiature (error, body), where body is the response
 //  JSON from the request
 //
+// The body this request returns in the callback is a js object, not a JSON string.
 function GoCardlessRequest(request) {
     this.request = request;
 }
 
 // Takes a string of the endpoint desired, e.g 'customers' and gets all of the
 // data from the sandbox by recursivley getting the all pages of data.
+//
 GoCardlessRequest.prototype.getAll = function(endpoint) {
     var self = this;
     return getRecursive(endpoint, []);
@@ -24,7 +26,6 @@ GoCardlessRequest.prototype.getAll = function(endpoint) {
                 if (error) {
                     reject(error);
                 }
-                // var responseBody = JSON.parse(body);
                 var responseData = body[endpoint];
                 data = data.concat(responseData);
 

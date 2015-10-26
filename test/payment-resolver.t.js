@@ -33,7 +33,11 @@ describe(moduleName, function() {
                     }
                 }];
                 var expected = {'payment': 'customer'};
-                assert.deepEqual(paymentResolver.getCustomersForPayment(payments, mandates, customerAccounts), expected);
+                assert.deepEqual(
+                    paymentResolver.getCustomersForPayment(
+                        payments,
+                        mandates,
+                        customerAccounts), expected);
             });
         });
     });
@@ -79,7 +83,12 @@ describe(moduleName, function() {
                     'First Name': 'Leroy',
                     'Last Name': 'Jenkins'
                 }];
-                assert.deepEqual(paymentResolver.resolvePayments(payments, customers, customerAccounts, mandates), expected);
+                assert.deepEqual(
+                    paymentResolver.resolvePayments(
+                        payments,
+                        customers,
+                        customerAccounts,
+                        mandates), expected);
             });
         });
     });

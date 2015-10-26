@@ -1,5 +1,5 @@
 # gc->csv
-returns a csv of payment information from the GoCardless sandbox
+returns a csv of payment information from the GoCardless sandbox.
 
 ### Setup
 
@@ -13,7 +13,7 @@ To run the tests
 ```bash
 npm test
 ```
-This will also give coverage results from the files tested
+This will also give coverage results from the files tested, look in `coverage/lcov-report/index.html` for more information about the coverage tests
 
 ### Running The Program
 ```bash

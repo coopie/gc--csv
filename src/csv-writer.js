@@ -11,6 +11,7 @@
 
 var _ = require('lodash');
 
+// returns a string of the CSV version of the data.
 function toCSV(data) {
     if (!_.isArray(data)) {
         throw new TypeError('CSVWRITER: Data input must be an array');

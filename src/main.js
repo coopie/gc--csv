@@ -57,7 +57,7 @@ function gcRequest(endpoint, after, callback) {
     options.uri = BASE_URL + '/' + endpoint;
     options.uri += after ? '?after=' + after : '';
     return request(options, function(error, resonse, body) {
-        return callback(error, JSON.stringify(body));
+        return callback(error, JSON.parse(body));
     });
 }
 
