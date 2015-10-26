@@ -16,7 +16,7 @@ describe(moduleName, function() {
                     works: 3
                 };
 
-                assert.equal(csvWriter.writeLine(keys, obj), '1, 2, 3\n');
+                assert.equal(csvWriter.writeLine(keys, obj), '1,2,3\n');
             });
         });
     });
@@ -32,7 +32,7 @@ describe(moduleName, function() {
             });
         });
         describe('Consistent data', function() {
-            it(shouldReturn + '1, 2, 3\n', function() {
+            it(shouldReturn + 'name and adress info for some people\n', function() {
                 var data = [
                     {
                         name: 'alan',
@@ -57,11 +57,11 @@ describe(moduleName, function() {
                 ];
 
                 var expected =
-                    'name, age, residence\n' +
-                    'alan, 13, London\n' +
-                    'Brian, 99, Leamington\n' +
-                    'Sam, 20, Bromsgrove\n' +
-                    'Timotej, unknown, Slovenia\n';
+                    'name,age,residence\n' +
+                    'alan,13,London\n' +
+                    'Brian,99,Leamington\n' +
+                    'Sam,20,Bromsgrove\n' +
+                    'Timotej,unknown,Slovenia\n';
 
                 assert.equal(csvWriter.toCSV(data), expected);
             });
